@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('/assets/sky.jpg');
+}
+
+.highway{
+    background-image: url('./assets/road.jpg');
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    width: 200%;
+    animation-name: highway;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes highway {
+    100%{
+       transform: translateX(-1300px);
+    }
+}
+
+.city{
+    background-image: url('./assets/city.png');
+    height: 250px;
+    position: absolute;
+    width: 500%;
+    bottom: 200px;
+    animation-name: city;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes city {
+    100%{
+        transform: translateX(-700px);
+    }
+}
+
+.car{
+    width: 500px;
+    position: absolute;
+    bottom: 42px;
+    left: 33%;
+    animation-name: car;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+}
+
+.car img{
+    width: 100%;
+}
+
+@keyframes car {
+    /* 0%{
+      transform: translateY(-40px);
+      
+    }
+
+    25%{
+        transform: translateY(40px);
+      
+    }
+
+    50%{
+        transform: translateY(-40px);
+       
+    }
+
+    100%{
+        transform: translateY(40px);
+        
+    } */
+
+    from{
+      transform: translateY(0px);
+    }
+    to{
+      transform: translateY(5px);
+    }
+
+    
+}
+
+.wheel{
+      position: absolute; 
+      bottom: 79px;
+      left: 30%;
+      animation-name: wheel;
+      animation: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+}
+
+@keyframes wheel {
+       from{
+         transform: translateY(0px);
+       }
+       to{
+        transform: translateY(4px);
+       }
+}
+
+.front-wheel{
+    position: absolute;
+    left: 370px;
+    bottom: 0px;
+}  
+
+.back-wheel{
+    position: absolute; 
+     left: 130px; 
+     bottom: 0px;
+}
+
+.wheel img{
+    width: 72px;
+    height: 72px;
+    animation-name: spin;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes spin {
+      100%{
+        transform: rotate(360deg);
+      }
+}
+
+.superman{
+    position: absolute;
+    bottom: 400px;
+    left: -9%;
+    /* transform: skewY(70deg); */
+    animation-name: superman;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes superman {
+    0%{
+      transform: translateX(0px) skewY(10deg);
+    }
+
+    25%{
+        transform: translateX(600px) skewY(14deg);
+    }
+
+    50%{
+        transform: translateY(100px) translateX(600px) ;
+    }
+
+   
+    75%{
+        transform: translateX(800px) skewY(18deg);
+
+    }
+
+    100%{
+        transform: translateX(1500px) skewY(22deg);
+    }
+}
+
+.superman img{
+    width: 150px;
+   
+}
+
+
